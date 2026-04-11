@@ -1,9 +1,6 @@
+// LensUI — shared SwiftUI framework.
 //
-//  LensUI.swift
-//  LensUI
-//
-//  Created by Rich Tape on 2026-04-10.
-//
-
-import Foundation
-
+// This file satisfies the framework build target.
+// Shared views are added here (or in subdirectories) starting in Phase 3.
+// Platform branches use #if os(macOS) / #if os(iOS).
+import SwiftUI

@@ -1,16 +1,8 @@
+// LensCoreTests — unit tests for LensCore.
 //
-//  LensCoreTests.swift
-//  LensCoreTests
-//
-//  Created by Rich Tape on 2026-04-10.
-//
-
+// Uses Swift Testing throughout: @Test functions, #expect() assertions.
+// The first real tests are introduced in Phase 2 alongside the first
+// real LensCore types. This file exists now so Phase 2 can start
+// writing tests immediately without extra Xcode target setup.
 import Testing
-
-struct LensCoreTests {
-
-    @Test func example() async throws {
-        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
-    }
-
-}
+@testable import LensCore

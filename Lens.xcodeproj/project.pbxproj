@@ -91,6 +91,21 @@
 		9BDA51DB2F8A112B0010F942 /* LensCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LensCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9BDA52042F8A159F0010F942 /* Exceptions for "LensCore" folder in "LensCore" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Events/.gitkeep,
+				Feeds/.gitkeep,
+				Models/.gitkeep,
+				Persistence/.gitkeep,
+				Routing/.gitkeep,
+				Theme/.gitkeep,
+			);
+			target = 9B81C06E2F8A0E62005946DC /* LensCore */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9B81C0492F8A0C64005946DC /* LensIOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
@@ -104,6 +119,9 @@
 		};
 		9B81C0702F8A0E62005946DC /* LensCore */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9BDA52042F8A159F0010F942 /* Exceptions for "LensCore" folder in "LensCore" target */,
+			);
 			path = LensCore;
 			sourceTree = "<group>";
 		};
