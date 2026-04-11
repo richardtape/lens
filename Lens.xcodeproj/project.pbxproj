@@ -1,0 +1,1023 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B81C0772F8A0E62005946DC /* LensCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C06F2F8A0E62005946DC /* LensCore.framework */; };
+		9B81C0782F8A0E62005946DC /* LensCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C06F2F8A0E62005946DC /* LensCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B81C08A2F8A0E93005946DC /* LensUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C0822F8A0E93005946DC /* LensUI.framework */; };
+		9B81C08B2F8A0E93005946DC /* LensUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C0822F8A0E93005946DC /* LensUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B81C0902F8A0F88005946DC /* LensCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C06F2F8A0E62005946DC /* LensCore.framework */; };
+		9B81C0912F8A0F88005946DC /* LensCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C06F2F8A0E62005946DC /* LensCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9B81C0952F8A0F91005946DC /* LensUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C0822F8A0E93005946DC /* LensUI.framework */; };
+		9B81C0962F8A0F91005946DC /* LensUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C0822F8A0E93005946DC /* LensUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9BDA51DF2F8A112B0010F942 /* LensCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C06F2F8A0E62005946DC /* LensCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B81C0752F8A0E62005946DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B81C03F2F8A0C64005946DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B81C06E2F8A0E62005946DC;
+			remoteInfo = LensCore;
+		};
+		9B81C0882F8A0E93005946DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B81C03F2F8A0C64005946DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B81C0812F8A0E93005946DC;
+			remoteInfo = LensUI;
+		};
+		9B81C0922F8A0F88005946DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B81C03F2F8A0C64005946DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B81C06E2F8A0E62005946DC;
+			remoteInfo = LensCore;
+		};
+		9B81C0972F8A0F91005946DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B81C03F2F8A0C64005946DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B81C0812F8A0E93005946DC;
+			remoteInfo = LensUI;
+		};
+		9BDA51E02F8A112B0010F942 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B81C03F2F8A0C64005946DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B81C06E2F8A0E62005946DC;
+			remoteInfo = LensCore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9B81C07C2F8A0E62005946DC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9B81C08B2F8A0E93005946DC /* LensUI.framework in Embed Frameworks */,
+				9B81C0782F8A0E62005946DC /* LensCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C0942F8A0F88005946DC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9B81C0962F8A0F91005946DC /* LensUI.framework in Embed Frameworks */,
+				9B81C0912F8A0F88005946DC /* LensCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9B81C0472F8A0C64005946DC /* LensIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LensIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B81C05F2F8A0E2D005946DC /* LensMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LensMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B81C06F2F8A0E62005946DC /* LensCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LensCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B81C0822F8A0E93005946DC /* LensUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LensUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BDA51DB2F8A112B0010F942 /* LensCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LensCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		9B81C0492F8A0C64005946DC /* LensIOS */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LensIOS;
+			sourceTree = "<group>";
+		};
+		9B81C0602F8A0E2D005946DC /* LensMac */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LensMac;
+			sourceTree = "<group>";
+		};
+		9B81C0702F8A0E62005946DC /* LensCore */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LensCore;
+			sourceTree = "<group>";
+		};
+		9B81C0832F8A0E93005946DC /* LensUI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LensUI;
+			sourceTree = "<group>";
+		};
+		9BDA51DC2F8A112B0010F942 /* LensCoreTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LensCoreTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B81C0442F8A0C64005946DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B81C08A2F8A0E93005946DC /* LensUI.framework in Frameworks */,
+				9B81C0772F8A0E62005946DC /* LensCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C05C2F8A0E2D005946DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B81C0952F8A0F91005946DC /* LensUI.framework in Frameworks */,
+				9B81C0902F8A0F88005946DC /* LensCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C06C2F8A0E62005946DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C07F2F8A0E93005946DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BDA51D82F8A112B0010F942 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BDA51DF2F8A112B0010F942 /* LensCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B81C03E2F8A0C64005946DC = {
+			isa = PBXGroup;
+			children = (
+				9B81C0492F8A0C64005946DC /* LensIOS */,
+				9B81C0602F8A0E2D005946DC /* LensMac */,
+				9B81C0702F8A0E62005946DC /* LensCore */,
+				9B81C0832F8A0E93005946DC /* LensUI */,
+				9BDA51DC2F8A112B0010F942 /* LensCoreTests */,
+				9B81C08F2F8A0F88005946DC /* Frameworks */,
+				9B81C0482F8A0C64005946DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B81C0482F8A0C64005946DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B81C0472F8A0C64005946DC /* LensIOS.app */,
+				9B81C05F2F8A0E2D005946DC /* LensMac.app */,
+				9B81C06F2F8A0E62005946DC /* LensCore.framework */,
+				9B81C0822F8A0E93005946DC /* LensUI.framework */,
+				9BDA51DB2F8A112B0010F942 /* LensCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B81C08F2F8A0F88005946DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9B81C06A2F8A0E62005946DC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C07D2F8A0E93005946DC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9B81C0462F8A0C64005946DC /* LensIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B81C0522F8A0C65005946DC /* Build configuration list for PBXNativeTarget "LensIOS" */;
+			buildPhases = (
+				9B81C0432F8A0C64005946DC /* Sources */,
+				9B81C0442F8A0C64005946DC /* Frameworks */,
+				9B81C0452F8A0C64005946DC /* Resources */,
+				9B81C07C2F8A0E62005946DC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B81C0762F8A0E62005946DC /* PBXTargetDependency */,
+				9B81C0892F8A0E93005946DC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9B81C0492F8A0C64005946DC /* LensIOS */,
+			);
+			name = LensIOS;
+			packageProductDependencies = (
+			);
+			productName = Lens;
+			productReference = 9B81C0472F8A0C64005946DC /* LensIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9B81C05E2F8A0E2D005946DC /* LensMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B81C0672F8A0E2E005946DC /* Build configuration list for PBXNativeTarget "LensMac" */;
+			buildPhases = (
+				9B81C05B2F8A0E2D005946DC /* Sources */,
+				9B81C05C2F8A0E2D005946DC /* Frameworks */,
+				9B81C05D2F8A0E2D005946DC /* Resources */,
+				9B81C0942F8A0F88005946DC /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B81C0932F8A0F88005946DC /* PBXTargetDependency */,
+				9B81C0982F8A0F91005946DC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9B81C0602F8A0E2D005946DC /* LensMac */,
+			);
+			name = LensMac;
+			packageProductDependencies = (
+			);
+			productName = LensMac;
+			productReference = 9B81C05F2F8A0E2D005946DC /* LensMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9B81C06E2F8A0E62005946DC /* LensCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B81C0792F8A0E62005946DC /* Build configuration list for PBXNativeTarget "LensCore" */;
+			buildPhases = (
+				9B81C06A2F8A0E62005946DC /* Headers */,
+				9B81C06B2F8A0E62005946DC /* Sources */,
+				9B81C06C2F8A0E62005946DC /* Frameworks */,
+				9B81C06D2F8A0E62005946DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9B81C0702F8A0E62005946DC /* LensCore */,
+			);
+			name = LensCore;
+			packageProductDependencies = (
+			);
+			productName = LensCore;
+			productReference = 9B81C06F2F8A0E62005946DC /* LensCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9B81C0812F8A0E93005946DC /* LensUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B81C08C2F8A0E93005946DC /* Build configuration list for PBXNativeTarget "LensUI" */;
+			buildPhases = (
+				9B81C07D2F8A0E93005946DC /* Headers */,
+				9B81C07E2F8A0E93005946DC /* Sources */,
+				9B81C07F2F8A0E93005946DC /* Frameworks */,
+				9B81C0802F8A0E93005946DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				9B81C0832F8A0E93005946DC /* LensUI */,
+			);
+			name = LensUI;
+			packageProductDependencies = (
+			);
+			productName = LensUI;
+			productReference = 9B81C0822F8A0E93005946DC /* LensUI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9BDA51DA2F8A112B0010F942 /* LensCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BDA51E42F8A112B0010F942 /* Build configuration list for PBXNativeTarget "LensCoreTests" */;
+			buildPhases = (
+				9BDA51D72F8A112B0010F942 /* Sources */,
+				9BDA51D82F8A112B0010F942 /* Frameworks */,
+				9BDA51D92F8A112B0010F942 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9BDA51E12F8A112B0010F942 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9BDA51DC2F8A112B0010F942 /* LensCoreTests */,
+			);
+			name = LensCoreTests;
+			packageProductDependencies = (
+			);
+			productName = LensCoreTests;
+			productReference = 9BDA51DB2F8A112B0010F942 /* LensCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B81C03F2F8A0C64005946DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					9B81C0462F8A0C64005946DC = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					9B81C05E2F8A0E2D005946DC = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					9B81C06E2F8A0E62005946DC = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					9B81C0812F8A0E93005946DC = {
+						CreatedOnToolsVersion = 26.3;
+					};
+					9BDA51DA2F8A112B0010F942 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = 9B81C0422F8A0C64005946DC /* Build configuration list for PBXProject "Lens" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9B81C03E2F8A0C64005946DC;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 9B81C0482F8A0C64005946DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B81C0462F8A0C64005946DC /* LensIOS */,
+				9B81C05E2F8A0E2D005946DC /* LensMac */,
+				9B81C06E2F8A0E62005946DC /* LensCore */,
+				9B81C0812F8A0E93005946DC /* LensUI */,
+				9BDA51DA2F8A112B0010F942 /* LensCoreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B81C0452F8A0C64005946DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C05D2F8A0E2D005946DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C06D2F8A0E62005946DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C0802F8A0E93005946DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BDA51D92F8A112B0010F942 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B81C0432F8A0C64005946DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C05B2F8A0E2D005946DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C06B2F8A0E62005946DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B81C07E2F8A0E93005946DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BDA51D72F8A112B0010F942 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B81C0762F8A0E62005946DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B81C06E2F8A0E62005946DC /* LensCore */;
+			targetProxy = 9B81C0752F8A0E62005946DC /* PBXContainerItemProxy */;
+		};
+		9B81C0892F8A0E93005946DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B81C0812F8A0E93005946DC /* LensUI */;
+			targetProxy = 9B81C0882F8A0E93005946DC /* PBXContainerItemProxy */;
+		};
+		9B81C0932F8A0F88005946DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B81C06E2F8A0E62005946DC /* LensCore */;
+			targetProxy = 9B81C0922F8A0F88005946DC /* PBXContainerItemProxy */;
+		};
+		9B81C0982F8A0F91005946DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B81C0812F8A0E93005946DC /* LensUI */;
+			targetProxy = 9B81C0972F8A0F91005946DC /* PBXContainerItemProxy */;
+		};
+		9BDA51E12F8A112B0010F942 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B81C06E2F8A0E62005946DC /* LensCore */;
+			targetProxy = 9BDA51E02F8A112B0010F942 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9B81C0502F8A0C65005946DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9B81C0512F8A0C65005946DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9B81C0532F8A0C65005946DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.Lens;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B81C0542F8A0C65005946DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.Lens;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9B81C0682F8A0E2E005946DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9B81C0692F8A0E2E005946DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readonly;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SDKROOT = macosx;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		9B81C07A2F8A0E62005946DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9B81C07B2F8A0E62005946DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensCore;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B81C08D2F8A0E93005946DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9B81C08E2F8A0E93005946DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_MODULE_VERIFIER = YES;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensUI;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = YES;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9BDA51E22F8A112B0010F942 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9BDA51E32F8A112B0010F942 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B81C0422F8A0C64005946DC /* Build configuration list for PBXProject "Lens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B81C0502F8A0C65005946DC /* Debug */,
+				9B81C0512F8A0C65005946DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B81C0522F8A0C65005946DC /* Build configuration list for PBXNativeTarget "LensIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B81C0532F8A0C65005946DC /* Debug */,
+				9B81C0542F8A0C65005946DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B81C0672F8A0E2E005946DC /* Build configuration list for PBXNativeTarget "LensMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B81C0682F8A0E2E005946DC /* Debug */,
+				9B81C0692F8A0E2E005946DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B81C0792F8A0E62005946DC /* Build configuration list for PBXNativeTarget "LensCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B81C07A2F8A0E62005946DC /* Debug */,
+				9B81C07B2F8A0E62005946DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B81C08C2F8A0E93005946DC /* Build configuration list for PBXNativeTarget "LensUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B81C08D2F8A0E93005946DC /* Debug */,
+				9B81C08E2F8A0E93005946DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BDA51E42F8A112B0010F942 /* Build configuration list for PBXNativeTarget "LensCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9BDA51E22F8A112B0010F942 /* Debug */,
+				9BDA51E32F8A112B0010F942 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B81C03F2F8A0C64005946DC /* Project object */;
+}

@@ -40,7 +40,7 @@ When an agent needs a build check it will ask:
 
 ## App Group
 
-SwiftData uses the shared App Group container **`group.com.richturner.lens`** (wired in Phase 2).
+SwiftData uses the shared App Group container **`group.com.richardtape.lens`** (wired in Phase 2).
 All app targets and any future extensions (Share Extension, widgets) must belong to this group.
 See [build strategy §7.2](docs/superpowers/specs/2026-04-10-lens-build-strategy.md) for setup steps.
 
