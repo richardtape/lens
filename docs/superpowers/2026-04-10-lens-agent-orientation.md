@@ -14,22 +14,31 @@ Lens is a native RSS/Atom/JSON Feed reader for iOS and macOS, built with SwiftUI
 
 ## Current state
 
-**Phase 0 complete.** `Lens.xcodeproj` exists at the repo root with four targets:
+**Phase 1 complete.** All three destinations build and run cleanly:
 
-| Target | Type | Source folder |
-|--------|------|---------------|
-| `LensIOS` | iOS App | `LensIOS/` |
-| `LensMac` | macOS App | `LensMac/` |
-| `LensCore` | iOS + macOS Framework | `LensCore/` |
-| `LensUI` | iOS + macOS Framework | `LensUI/` |
+| Destination | Scheme | Verified |
+|-------------|--------|---------|
+| iOS Simulator (iPhone 16 Pro) | LensIOS | ✓ |
+| Physical iPhone | LensIOS | ✓ |
+| macOS (My Mac) | LensMac | ✓ |
 
-A `LensCoreTests` unit test target also exists (source: `LensCoreTests/`).
+`LensCoreTests` builds and runs 0 tests (correct for Phase 1).
 
-`LensCore/` has six scaffolded subdirectories (`Models/`, `Persistence/`, `Feeds/`, `Events/`, `Theme/`, `Routing/`) each with a `.gitkeep` placeholder. These are on disk but not yet added as groups in Xcode — add them when Phase 2 populates them with Swift files.
+**Project structure:**
 
-**App Group** `group.com.richardtape.lens` is documented in README and build-strategy §7.2. The Xcode capability is **not yet enabled** — this is wired in Phase 2 when the ModelContainer is created.
+| Target | Type | Source folder | Deployment target |
+|--------|------|---------------|-------------------|
+| `LensIOS` | iOS App | `LensIOS/` | iOS 26.0 |
+| `LensMac` | macOS App | `LensMac/` | macOS 26.0 |
+| `LensCore` | iOS + macOS Framework | `LensCore/` | iOS 26.0 / macOS 26.0 |
+| `LensUI` | iOS + macOS Framework | `LensUI/` | iOS 26.0 / macOS 26.0 |
+| `LensCoreTests` | Unit Test (LensCore) | `LensCoreTests/` | iOS 26.0 |
 
-Phase 1 (hello-world build verification on iOS Simulator, physical device, and macOS) has not been run.
+`LensCore/` subdirectory scaffold: `Models/`, `Persistence/`, `Feeds/`, `Events/`, `Theme/`, `Routing/` — each with `.gitkeep`. The `.gitkeep` files must **not** appear in any target's Copy Bundle Resources build phase.
+
+**App Group** `group.com.richardtape.lens` is documented; Xcode capability wired in Phase 2.
+
+**Next:** Phase 2 — LensCore foundation (SwiftData, event bus, addon registry, minimal feed fetch).
 
 ---
 
