@@ -95,7 +95,6 @@
 		9BDA52042F8A159F0010F942 /* Exceptions for "LensCore" folder in "LensCore" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Events/.gitkeep,
 				Feeds/.gitkeep,
 				Models/.gitkeep,
 				Persistence/.gitkeep,
