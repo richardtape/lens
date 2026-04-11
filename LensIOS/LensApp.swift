@@ -8,6 +8,7 @@
 // working database the app cannot function. The most likely cause is a
 // missing App Groups capability (see build strategy §7.2).
 import SwiftUI
+import SwiftData
 import LensCore
 
 @main

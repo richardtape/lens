@@ -3,6 +3,7 @@
 // Same setup as LensApp (iOS): ModelContainer created once, injected into
 // the environment. Category seeding is identical.
 import SwiftUI
+import SwiftData
 import LensCore
 
 @main
