@@ -100,4 +100,14 @@ public enum LensEvent: Equatable, Sendable {
     /// The active reading theme was changed.
     /// `themeName` is the identifier from the theme's manifest (or `"default"` for the built-in theme).
     case themeApplied(themeName: String)
+
+    // MARK: Addon lifecycle
+
+    /// An addon was successfully downloaded, verified, extracted, and registered.
+    /// `addonId` is the `identifier` field from the addon's manifest.json.
+    case addonInstalled(addonId: String)
+    /// An addon installation attempt failed at any stage.
+    /// `addonId` is nil if the failure occurred before the manifest was parsed
+    /// (e.g. download or ZIP extraction failure).
+    case addonInstallFailed(addonId: String?, error: String)
 }

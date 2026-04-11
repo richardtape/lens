@@ -64,6 +64,9 @@ struct LensEventTests {
             .itemSavedOffline(itemId: id2),
             .itemOfflineSaveRemoved(itemId: id2),
             .themeApplied(themeName: "default"),
+            .addonInstalled(addonId: "com.example.dark-theme"),
+            .addonInstallFailed(addonId: "com.example.dark-theme", error: "download failed"),
+            .addonInstallFailed(addonId: nil, error: "bad zip"),
         ]
         // Each case must equal itself — confirms Equatable and Sendable compile correctly.
         for event in cases {

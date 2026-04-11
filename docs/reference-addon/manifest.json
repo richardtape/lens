@@ -1,0 +1,10 @@
+{
+  "identifier": "com.richardtape.lens.reference-theme",
+  "version": "1.0.0",
+  "minimumLensVersion": "1.0.0",
+  "displayName": "Lens Dark Pro",
+  "description": "A focused dark reading theme for Lens. Reference addon for the Phase 2D vertical slice.",
+  "capabilities": ["theme"],
+  "permissions": [],
+  "assets": ["theme.css"]
+}

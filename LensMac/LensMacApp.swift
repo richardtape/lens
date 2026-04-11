@@ -34,4 +34,5 @@ struct LensMacApp: App {
             print("[Lens] Category seeding failed: \(error)")
         }
     }
+
 }

@@ -1,0 +1,63 @@
+/*
+ * Lens Dark Pro — reference theme addon
+ * Identifier: com.richardtape.lens.reference-theme
+ *
+ * This theme uses the --lens-* CSS custom properties defined by ThemeEngine
+ * (spec §2.4, §9 token contract). Overriding them here changes the reading
+ * experience without touching the structural layer.
+ *
+ * This file is the reference implementation for the Phase 2D addon vertical
+ * slice — its primary purpose is to prove the manifest → zip → install →
+ * ThemeEngine pipeline, not to be a polished production theme.
+ */
+
+:root {
+  --lens-bg:            #1a1b1e;
+  --lens-text:          #e8e8e8;
+  --lens-link:          #7cb7f7;
+  --lens-font-family:   "Georgia", serif;
+  --lens-font-size:     19px;
+  --lens-line-height:   1.75;
+  --lens-content-width: 720px;
+  --lens-code-font:     "Menlo", ui-monospace, monospace;
+}
+
+body {
+  background-color: var(--lens-bg);
+  color:            var(--lens-text);
+  font-family:      var(--lens-font-family);
+  font-size:        var(--lens-font-size);
+  line-height:      var(--lens-line-height);
+  max-width:        var(--lens-content-width);
+  margin:           0 auto;
+  padding:          2rem 1.5rem;
+}
+
+a {
+  color: var(--lens-link);
+}
+
+pre,
+code {
+  font-family:      var(--lens-code-font);
+  background-color: #2d2e32;
+  padding:          0.15em 0.4em;
+  border-radius:    4px;
+}
+
+pre {
+  padding:    1em 1.25em;
+  overflow-x: auto;
+}
+
+blockquote {
+  border-left: 3px solid #4a4b50;
+  margin-left: 0;
+  padding-left: 1.25em;
+  color: #aaa;
+}
+
+img {
+  max-width: 100%;
+  height:    auto;
+}
