@@ -15,7 +15,7 @@ struct FilterSheetView: View {
     @Binding var filterMode: TimelineFilter
     @Binding var unreadOnly: Bool
 
-    @Query(sort: \Category.sortOrder) private var categories: [Category]
+    @Query(sort: \Category.sortOrder) fileprivate var categories: [Category]
     @Query(sort: \Feed.displayName)   private var feeds: [Feed]
 
     @Environment(\.dismiss) private var dismiss
