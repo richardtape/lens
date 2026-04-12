@@ -8,7 +8,8 @@ import SwiftData
 import LensCore
 
 // Category conflicts with an ObjC runtime type when Foundation is in scope.
-private typealias Category = LensCore.Category
+// fileprivate (not private) so @Query's generated storage can reference the type.
+fileprivate typealias Category = LensCore.Category
 
 struct FilterSheetView: View {
     @Binding var filterMode: TimelineFilter
