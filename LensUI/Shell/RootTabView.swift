@@ -8,6 +8,7 @@
 // Unbuilt destinations (Feeds, Saved, Settings) navigate to their stub view —
 // they won't crash.
 import SwiftUI
+import SwiftData
 import LensCore
 
 // Category conflicts with an ObjC runtime type when Foundation is in scope.
