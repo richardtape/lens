@@ -43,7 +43,7 @@ public struct RootSplitView: View {
     @Query private var prefsQuery: [UserReadingPreferences]
     private var prefs: UserReadingPreferences? { prefsQuery.first }
 
-    var body: some View {
+    public var body: some View {
         let accentColor = Color(hex: prefs?.accentColorHex ?? "#4A90D9")
 
         NavigationSplitView(columnVisibility: $columnVisibility) {
