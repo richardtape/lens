@@ -22,6 +22,12 @@ struct UserReadingPreferencesTests {
         #expect(prefs.listDensity == 0.5)
     }
 
+    @Test("default accentColorHex is system blue")
+    func defaultAccentColorHex() throws {
+        let prefs = UserReadingPreferences()
+        #expect(prefs.accentColorHex == "#4A90D9")
+    }
+
     @Test("AppearanceOverride round-trips through Codable")
     func appearanceOverrideCodable() throws {
         let encoder = JSONEncoder()

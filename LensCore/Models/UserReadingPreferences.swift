@@ -41,6 +41,9 @@ public final class UserReadingPreferences {
     /// 0.0–1.0 slider value; maps to ~4 discrete density modes in the article list.
     /// Card density (top of range) is deferred to v2.
     public var listDensity: Double
+    /// Hex string for the unread accent bar, monogram, and active filter button.
+    /// Default matches system blue. Phase 7 provides the settings UI to change this.
+    public var accentColorHex: String
 
     public init() {
         appearanceOverride = .system
@@ -52,5 +55,6 @@ public final class UserReadingPreferences {
         imageLightboxEnabled = false // afforded: not implemented in v1
         externalLinkBehavior = .systemBrowser
         listDensity = 0.5
+        accentColorHex = "#4A90D9"
     }
 }
