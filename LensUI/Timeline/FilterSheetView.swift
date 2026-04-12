@@ -14,7 +14,9 @@ struct FilterSheetView: View {
     @Binding var filterMode: TimelineFilter
     @Binding var unreadOnly: Bool
 
-    @Query(sort: \LensCore.Category.sortOrder) var categories: [LensCore.Category]
+    // Sort key path on a cross-module @Model type triggers fileprivate backing storage
+    // in macro-expanded code; fetch unsorted and sort in the view instead.
+    @Query var categories: [LensCore.Category]
     @Query(sort: \Feed.displayName)            private var feeds: [Feed]
 
     @Environment(\.dismiss) private var dismiss
@@ -62,7 +64,7 @@ struct FilterSheetView: View {
             }
             .foregroundStyle(.primary)
 
-            ForEach(categories) { category in
+            ForEach(categories.sorted { $0.sortOrder < $1.sortOrder }) { category in
                 Button {
                     filterMode = .category(category.id)
                 } label: {

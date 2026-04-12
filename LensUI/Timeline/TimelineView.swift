@@ -90,15 +90,18 @@ struct TimelineView: View {
         }
 
         ToolbarItem(placement: toolbarLeadingPlacement) {
-            Button {
-                timelineState.unreadOnly.toggle()
-            } label: {
-                Label(
-                    "Unread Only",
-                    systemImage: timelineState.unreadOnly ? "circle.fill" : "circle"
-                )
+            // .glass and .glassProminent are different concrete types; can't use a ternary.
+            if timelineState.unreadOnly {
+                Button { timelineState.unreadOnly.toggle() } label: {
+                    Label("Unread Only", systemImage: "circle.fill")
+                }
+                .buttonStyle(.glassProminent)
+            } else {
+                Button { timelineState.unreadOnly.toggle() } label: {
+                    Label("Unread Only", systemImage: "circle")
+                }
+                .buttonStyle(.glass)
             }
-            .buttonStyle(timelineState.unreadOnly ? .glassProminent : .glass)
         }
     }
 
