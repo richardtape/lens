@@ -19,7 +19,7 @@ struct NewItemsBanner: Equatable {
 
 @Observable
 @MainActor
-final class TimelineState {
+public final class TimelineState {
     var filterMode: TimelineFilter = .all
     /// When true, stacks on top of filterMode to show only unread items.
     var unreadOnly: Bool = false
@@ -27,7 +27,7 @@ final class TimelineState {
     var newItemsBanner: NewItemsBanner? = nil
 
     /// Designated init. Accepts an EventBus so unit tests can inject a fresh bus.
-    init(eventBus: EventBus = .shared) {
+    public init(eventBus: EventBus = .shared) {
         // Weak self: when TimelineState is deallocated, `guard let self else { break }`
         // exits the loop on the next iteration — no explicit cancellation needed.
         Task { @MainActor [weak self] in

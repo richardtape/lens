@@ -20,7 +20,7 @@ import LensCore
 // MARK: - FocusedValues extension for ? shortcut
 
 extension FocusedValues {
-    @Entry var showKeyboardShortcuts: Binding<Bool>? = nil
+    @Entry public var showKeyboardShortcuts: Binding<Bool>? = nil
 }
 
 // MARK: - Sidebar destination
@@ -31,7 +31,8 @@ enum MacDestination: Hashable {
     case categories
 }
 
-struct RootSplitView: View {
+public struct RootSplitView: View {
+    public init() {}
     @Environment(TimelineState.self) private var timelineState
 
     @State private var columnVisibility: NavigationSplitViewVisibility = .all

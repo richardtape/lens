@@ -17,7 +17,8 @@ enum RootTab: Hashable {
     case timeline, feeds, saved, settings
 }
 
-struct RootTabView: View {
+public struct RootTabView: View {
+    public init() {}
     @Environment(TimelineState.self) private var timelineState
     @Environment(\.modelContext) private var modelContext
 
