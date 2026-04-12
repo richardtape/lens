@@ -3,20 +3,19 @@
 // Presented as a modal sheet on iOS and a popover on macOS (caller decides).
 // Category and feed filters are mutually exclusive; selecting one clears the other.
 // The unreadOnly toggle lives in the toolbar, not here.
+//
+// LensCore.Category is used fully-qualified throughout to avoid the ObjC
+// runtime name clash that occurs when Foundation is in scope (via SwiftUI).
 import SwiftUI
 import SwiftData
 import LensCore
-
-// Category conflicts with an ObjC runtime type when Foundation is in scope.
-// fileprivate (not private) so @Query's generated storage can reference the type.
-fileprivate typealias Category = LensCore.Category
 
 struct FilterSheetView: View {
     @Binding var filterMode: TimelineFilter
     @Binding var unreadOnly: Bool
 
-    @Query(sort: \Category.sortOrder) fileprivate var categories: [Category]
-    @Query(sort: \Feed.displayName)   private var feeds: [Feed]
+    @Query(sort: \LensCore.Category.sortOrder) private var categories: [LensCore.Category]
+    @Query(sort: \Feed.displayName)            private var feeds: [Feed]
 
     @Environment(\.dismiss) private var dismiss
 
@@ -116,5 +115,5 @@ struct FilterSheetView: View {
     @Previewable @State var filter: TimelineFilter = .all
     @Previewable @State var unreadOnly = false
     FilterSheetView(filterMode: $filter, unreadOnly: $unreadOnly)
-        .modelContainer(for: [Category.self, Feed.self], inMemory: true)
+        .modelContainer(for: [LensCore.Category.self, Feed.self], inMemory: true)
 }
