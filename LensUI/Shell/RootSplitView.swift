@@ -15,8 +15,6 @@ import SwiftUI
 import SwiftData
 import LensCore
 
-// Category conflicts with an ObjC runtime type when Foundation is in scope.
-private typealias Category = LensCore.Category
 
 // MARK: - FocusedValues extension for ? shortcut
 
@@ -165,6 +163,6 @@ private struct KeyboardShortcutsSheet: View {
 #Preview {
     RootSplitView()
         .environment(TimelineState())
-        .modelContainer(for: [FeedItem.self, Feed.self, Category.self, UserReadingPreferences.self], inMemory: true)
+        .modelContainer(for: [FeedItem.self, Feed.self, LensCore.Category.self, UserReadingPreferences.self], inMemory: true)
         .frame(minWidth: 900, minHeight: 600)
 }

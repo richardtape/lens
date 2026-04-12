@@ -11,8 +11,6 @@ import SwiftUI
 import SwiftData
 import LensCore
 
-// Category conflicts with an ObjC runtime type when Foundation is in scope.
-private typealias Category = LensCore.Category
 
 // Tab identifiers for programmatic selection (deep linking).
 enum RootTab: Hashable {
@@ -84,5 +82,5 @@ struct RootTabView: View {
 #Preview {
     RootTabView()
         .environment(TimelineState())
-        .modelContainer(for: [FeedItem.self, Feed.self, Category.self, UserReadingPreferences.self], inMemory: true)
+        .modelContainer(for: [FeedItem.self, Feed.self, LensCore.Category.self, UserReadingPreferences.self], inMemory: true)
 }

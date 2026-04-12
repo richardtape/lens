@@ -12,8 +12,6 @@ import SwiftUI
 import SwiftData
 import LensCore
 
-// Category conflicts with an ObjC runtime type when Foundation is in scope.
-private typealias Category = LensCore.Category
 
 // MARK: - TimelineView (outer)
 
@@ -379,7 +377,7 @@ private struct MacOSKeyboardShortcutsView: View {
         TimelineView(selectedItem: .constant(nil))
             .environment(TimelineState())
     }
-    .modelContainer(for: [FeedItem.self, Feed.self, Category.self], inMemory: true)
+    .modelContainer(for: [FeedItem.self, Feed.self, LensCore.Category.self], inMemory: true)
     .environment(\.lensAccentColor, Color(hex: "#4A90D9"))
     .environment(\.lensListDensity, 0.5)
 }
