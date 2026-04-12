@@ -10,6 +10,7 @@
 //   0.33–0.67 Compact      source + title + timestamp
 //   0.67–1.0  Standard     full layout (default at 0.5)
 import SwiftUI
+import SwiftData
 import LensCore
 
 struct ArticleRowView: View {
