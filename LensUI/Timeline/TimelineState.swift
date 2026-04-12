@@ -26,7 +26,8 @@ final class TimelineState {
     /// Non-nil while the "N new items" pill should be shown.
     var newItemsBanner: NewItemsBanner? = nil
 
-    private var eventTask: Task<Void, Never>?
+    // nonisolated(unsafe): written once in init, read once in deinit — no data race possible.
+    nonisolated(unsafe) private var eventTask: Task<Void, Never>?
 
     /// Designated init. Accepts an EventBus so unit tests can inject a fresh bus.
     init(eventBus: EventBus = .shared) {
