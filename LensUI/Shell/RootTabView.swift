@@ -54,7 +54,9 @@ struct RootTabView: View {
             }
         }
         .tabViewStyle(.sidebarAdaptable)
+        #if os(iOS)
         .tabBarMinimizeBehavior(.onScrollDown)
+        #endif
         .tint(accentColor)
         .environment(\.lensAccentColor, accentColor)
         .environment(\.lensListDensity, prefs?.listDensity ?? 0.5)
