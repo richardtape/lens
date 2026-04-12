@@ -92,6 +92,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9B3492102F8C3A4000A73A71 /* Exceptions for "LensIOS" folder in "LensIOS" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9B81C0462F8A0C64005946DC /* LensIOS */;
+		};
+		9B3492122F8C3A6700A73A71 /* Exceptions for "LensMac" folder in "LensMac" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9B81C05E2F8A0E2D005946DC /* LensMac */;
+		};
 		9BDA52042F8A159F0010F942 /* Exceptions for "LensCore" folder in "LensCore" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -108,11 +122,17 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9B81C0492F8A0C64005946DC /* LensIOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9B3492102F8C3A4000A73A71 /* Exceptions for "LensIOS" folder in "LensIOS" target */,
+			);
 			path = LensIOS;
 			sourceTree = "<group>";
 		};
 		9B81C0602F8A0E2D005946DC /* LensMac */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9B3492122F8C3A6700A73A71 /* Exceptions for "LensMac" folder in "LensMac" target */,
+			);
 			path = LensMac;
 			sourceTree = "<group>";
 		};
@@ -640,6 +660,7 @@
 				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LensIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -673,6 +694,7 @@
 				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LensIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -711,6 +733,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LensMac/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -747,6 +770,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LensMac/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -22,6 +22,13 @@ struct LensMacApp: App {
         WindowGroup {
             ContentView()
                 .task { await seedOnLaunch() }
+                .onOpenURL { url in
+                    // Route lens:// URLs to DeepLinkRouter on a background Task.
+                    // onOpenURL provides the URL synchronously; async bridged here.
+                    Task {
+                        await DeepLinkRouter.handle(url)
+                    }
+                }
         }
         .modelContainer(container)
     }

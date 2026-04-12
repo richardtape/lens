@@ -67,6 +67,13 @@ struct LensEventTests {
             .addonInstalled(addonId: "com.example.dark-theme"),
             .addonInstallFailed(addonId: "com.example.dark-theme", error: "download failed"),
             .addonInstallFailed(addonId: nil, error: "bad zip"),
+            .navigateToAddFeed(prefillURL: URL(string: "https://example.com/feed.xml")),
+            .navigateToAddFeed(prefillURL: nil),
+            .navigateToFeed(feedId: id1),
+            .navigateToItem(itemId: id2),
+            .navigateToSaved,
+            .navigateToSettings,
+            .navigateToOPMLImport(sourceURL: URL(string: "https://example.com/feeds.opml")!),
         ]
         // Each case must equal itself — confirms Equatable and Sendable compile correctly.
         for event in cases {

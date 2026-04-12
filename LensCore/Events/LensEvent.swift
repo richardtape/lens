@@ -110,4 +110,25 @@ public enum LensEvent: Equatable, Sendable {
     /// `addonId` is nil if the failure occurred before the manifest was parsed
     /// (e.g. download or ZIP extraction failure).
     case addonInstallFailed(addonId: String?, error: String)
+
+    // MARK: Navigation (emitted by DeepLinkRouter; consumed by scene-level coordinators)
+
+    /// Open the add-feed sheet, optionally pre-filled with a URL.
+    /// Emitted for `lens://feed/add` and `lens://feed/add?url=<encoded>` (spec §4.12).
+    case navigateToAddFeed(prefillURL: URL?)
+    /// Navigate to a specific feed's article list.
+    /// Emitted for `lens://feed/<id>` (spec §4.12).
+    case navigateToFeed(feedId: UUID)
+    /// Open a specific article in the reader view.
+    /// Emitted for `lens://item/<id>` (spec §4.12).
+    case navigateToItem(itemId: UUID)
+    /// Navigate to the Saved Items view.
+    /// Emitted for `lens://saved` (spec §4.12).
+    case navigateToSaved
+    /// Navigate to the Settings screen.
+    /// Emitted for `lens://settings` (spec §4.12).
+    case navigateToSettings
+    /// Import OPML subscriptions from the given URL.
+    /// Emitted for `lens://import?opml=<url>` (spec §4.12).
+    case navigateToOPMLImport(sourceURL: URL)
 }
