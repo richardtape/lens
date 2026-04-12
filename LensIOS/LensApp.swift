@@ -1,19 +1,18 @@
 // LensApp.swift — iOS app entry point.
 //
-// Responsibilities: create the ModelContainer once and inject it into the
-// SwiftUI environment. All views below use @Query or the modelContext
-// environment value — never create their own containers.
-//
-// fatalError on container creation failure is intentional: without a
-// working database the app cannot function. The most likely cause is a
-// missing App Groups capability (see build strategy §7.2).
+// TimelineState is created once here and injected as an @Observable environment
+// object. This keeps a single source of truth for filter state and the new-items
+// banner across all views.
 import SwiftUI
 import SwiftData
 import LensCore
+import LensUI
 
 @main
 struct LensApp: App {
     private let container: ModelContainer
+
+    @State private var timelineState = TimelineState()
 
     init() {
         do {
@@ -26,27 +25,20 @@ struct LensApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(timelineState)
                 .task { await seedOnLaunch() }
                 .onOpenURL { url in
-                    // Route lens:// URLs to DeepLinkRouter on a background Task.
-                    // onOpenURL provides the URL synchronously; async bridged here.
-                    Task {
-                        await DeepLinkRouter.handle(url)
-                    }
+                    Task { await DeepLinkRouter.handle(url) }
                 }
         }
         .modelContainer(container)
     }
 
-    // Seeding runs asynchronously so it doesn't block the first frame.
-    // Category seeding is idempotent — safe to call on every launch.
     @MainActor
     private func seedOnLaunch() async {
         do {
             try CategorySeeder.seedIfNeeded(in: container.mainContext)
         } catch {
-            // Seeding failure is non-fatal: the app works without categories;
-            // seeding will retry on the next launch.
             print("[Lens] Category seeding failed: \(error)")
         }
     }
