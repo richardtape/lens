@@ -98,6 +98,7 @@ trigger a fetch → parse → persist → event-emit cycle. No background schedu
 - Accent color is set via `.tint()` on root views AND `.environment(\.lensAccentColor, ...)`. Standard controls (buttons, toggles) pick up `.tint`; custom shapes (accent bar, monogram background) read `@Environment(\.lensAccentColor)`.
 - `ReaderStubView` is the Phase 4 replacement target — it already receives `FeedItem?` and is wired into both the iOS `NavigationStack` (via `.navigationDestination`) and the macOS detail column.
 - macOS `?` keyboard shortcut uses `FocusedValues.showKeyboardShortcuts` — the Commands block in `LensMacApp.swift` reads it; `RootSplitView` provides it via `.focusedSceneValue`.
+- All types in `LensUI` used from `LensIOS`/`LensMac` must be `public` — including the struct, `init()`, and `var body`. After changing access levels, a **Product → Clean Build Folder (⌘⇧K)** is required or Xcode links against stale cached objects and the app fails preflight at launch.
 
 ---
 
