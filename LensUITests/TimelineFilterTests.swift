@@ -1,6 +1,7 @@
 // LensUITests/TimelineFilterTests.swift
 // Pending human completing Task 2 (creating the LensUITests Xcode target before tests run).
 import Testing
+import Foundation
 import SwiftData
 @testable import LensUI
 @testable import LensCore
