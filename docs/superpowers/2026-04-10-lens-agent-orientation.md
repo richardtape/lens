@@ -200,3 +200,4 @@ Do not leave this file describing a state that no longer matches the repo.
 | [`specs/2026-04-10-lens-build-strategy.md`](./specs/2026-04-10-lens-build-strategy.md) | Xcode workflow, signing, SPM — primarily for the human driver |
 | [`2026-04-10-lens-code-rules-for-agents.md`](./2026-04-10-lens-code-rules-for-agents.md) | Expanded style and architecture rules |
 | Per-session phase plan | The slice you are implementing now (must map to the build roadmap above) |
+| **`/Users/rich/Developer/apple-os-documentation`** | **Local clone of Apple developer docs + HIG in markdown.** Grep it first before fetching apple.com. Key dirs: `liquid-glass/`, `human-interface-guidelines/components/`, `human-interface-guidelines/foundations/`, `documentation/`. Use `grep -r -l "keyword" /Users/rich/Developer/apple-os-documentation/` to find relevant files, then read only what you need. |

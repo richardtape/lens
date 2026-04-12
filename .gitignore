@@ -22,6 +22,9 @@ build/
 .build/
 .swiftpm/xcode/xcuserdata/
 
+# Brainstorm session files (visual companion)
+.superpowers/
+
 # macOS noise
 .DS_Store
 .AppleDouble
