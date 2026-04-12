@@ -26,13 +26,11 @@ final class TimelineState {
     /// Non-nil while the "N new items" pill should be shown.
     var newItemsBanner: NewItemsBanner? = nil
 
-    nonisolated private var eventTask: Task<Void, Never>?
-
     /// Designated init. Accepts an EventBus so unit tests can inject a fresh bus.
     init(eventBus: EventBus = .shared) {
-        // The @MainActor task closure ensures all property mutations happen on
-        // the main thread, where SwiftUI observes @Observable changes.
-        eventTask = Task { @MainActor [weak self] in
+        // Weak self: when TimelineState is deallocated, `guard let self else { break }`
+        // exits the loop on the next iteration — no explicit cancellation needed.
+        Task { @MainActor [weak self] in
             for await event in await eventBus.makeStream() {
                 guard let self else { break }
                 switch event {
@@ -48,9 +46,5 @@ final class TimelineState {
                 }
             }
         }
-    }
-
-    deinit {
-        eventTask?.cancel()
     }
 }
