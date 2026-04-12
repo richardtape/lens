@@ -28,7 +28,11 @@ struct NewItemsBannerView: View {
 
 #Preview {
     ZStack(alignment: .top) {
+        #if os(iOS)
         Color(.systemGroupedBackground).ignoresSafeArea()
+        #else
+        Color(.windowBackgroundColor).ignoresSafeArea()
+        #endif
         NewItemsBannerView(banner: NewItemsBanner(count: 12)) {}
             .padding(.top, 20)
     }
