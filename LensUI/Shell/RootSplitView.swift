@@ -15,6 +15,7 @@ import SwiftUI
 import SwiftData
 import LensCore
 
+#if os(macOS)
 
 // MARK: - FocusedValues extension for ? shortcut
 
@@ -166,3 +167,5 @@ private struct KeyboardShortcutsSheet: View {
         .modelContainer(for: [FeedItem.self, Feed.self, LensCore.Category.self, UserReadingPreferences.self], inMemory: true)
         .frame(minWidth: 900, minHeight: 600)
 }
+
+#endif // os(macOS)
