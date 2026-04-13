@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B34922C2F8C5D0C00A73A71 /* LensUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C0822F8A0E93005946DC /* LensUI.framework */; };
+		9B3492382F8C5D8D00A73A71 /* LensCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C06F2F8A0E62005946DC /* LensCore.framework */; };
+		9B3492392F8C5D8D00A73A71 /* LensCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C06F2F8A0E62005946DC /* LensCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B81C0772F8A0E62005946DC /* LensCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C06F2F8A0E62005946DC /* LensCore.framework */; };
 		9B81C0782F8A0E62005946DC /* LensCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C06F2F8A0E62005946DC /* LensCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9B81C08A2F8A0E93005946DC /* LensUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B81C0822F8A0E93005946DC /* LensUI.framework */; };
@@ -19,6 +22,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9B34922D2F8C5D0C00A73A71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B81C03F2F8A0C64005946DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B81C0812F8A0E93005946DC;
+			remoteInfo = LensUI;
+		};
+		9B34923A2F8C5D8D00A73A71 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B81C03F2F8A0C64005946DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B81C06E2F8A0E62005946DC;
+			remoteInfo = LensCore;
+		};
 		9B81C0752F8A0E62005946DC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9B81C03F2F8A0C64005946DC /* Project object */;
@@ -57,6 +74,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9B34923C2F8C5D8D00A73A71 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9B3492392F8C5D8D00A73A71 /* LensCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B81C07C2F8A0E62005946DC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,6 +112,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9B3492282F8C5D0C00A73A71 /* LensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B81C0472F8A0C64005946DC /* LensIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LensIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B81C05F2F8A0E2D005946DC /* LensMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LensMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B81C06F2F8A0E62005946DC /* LensCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LensCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +149,11 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		9B3492292F8C5D0C00A73A71 /* LensUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LensUITests;
+			sourceTree = "<group>";
+		};
 		9B81C0492F8A0C64005946DC /* LensIOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -157,6 +191,14 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9B3492252F8C5D0C00A73A71 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B34922C2F8C5D0C00A73A71 /* LensUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B81C0442F8A0C64005946DC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -186,6 +228,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B3492382F8C5D8D00A73A71 /* LensCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +251,7 @@
 				9B81C0702F8A0E62005946DC /* LensCore */,
 				9B81C0832F8A0E93005946DC /* LensUI */,
 				9BDA51DC2F8A112B0010F942 /* LensCoreTests */,
+				9B3492292F8C5D0C00A73A71 /* LensUITests */,
 				9B81C08F2F8A0F88005946DC /* Frameworks */,
 				9B81C0482F8A0C64005946DC /* Products */,
 			);
@@ -221,6 +265,7 @@
 				9B81C06F2F8A0E62005946DC /* LensCore.framework */,
 				9B81C0822F8A0E93005946DC /* LensUI.framework */,
 				9BDA51DB2F8A112B0010F942 /* LensCoreTests.xctest */,
+				9B3492282F8C5D0C00A73A71 /* LensUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -252,6 +297,29 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9B3492272F8C5D0C00A73A71 /* LensUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B34922F2F8C5D0C00A73A71 /* Build configuration list for PBXNativeTarget "LensUITests" */;
+			buildPhases = (
+				9B3492242F8C5D0C00A73A71 /* Sources */,
+				9B3492252F8C5D0C00A73A71 /* Frameworks */,
+				9B3492262F8C5D0C00A73A71 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B34922E2F8C5D0C00A73A71 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				9B3492292F8C5D0C00A73A71 /* LensUITests */,
+			);
+			name = LensUITests;
+			packageProductDependencies = (
+			);
+			productName = LensUITests;
+			productReference = 9B3492282F8C5D0C00A73A71 /* LensUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9B81C0462F8A0C64005946DC /* LensIOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9B81C0522F8A0C65005946DC /* Build configuration list for PBXNativeTarget "LensIOS" */;
@@ -333,10 +401,12 @@
 				9B81C07E2F8A0E93005946DC /* Sources */,
 				9B81C07F2F8A0E93005946DC /* Frameworks */,
 				9B81C0802F8A0E93005946DC /* Resources */,
+				9B34923C2F8C5D8D00A73A71 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9B34923B2F8C5D8D00A73A71 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				9B81C0832F8A0E93005946DC /* LensUI */,
@@ -381,6 +451,9 @@
 				LastSwiftUpdateCheck = 2630;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
+					9B3492272F8C5D0C00A73A71 = {
+						CreatedOnToolsVersion = 26.3;
+					};
 					9B81C0462F8A0C64005946DC = {
 						CreatedOnToolsVersion = 26.3;
 					};
@@ -417,11 +490,19 @@
 				9B81C06E2F8A0E62005946DC /* LensCore */,
 				9B81C0812F8A0E93005946DC /* LensUI */,
 				9BDA51DA2F8A112B0010F942 /* LensCoreTests */,
+				9B3492272F8C5D0C00A73A71 /* LensUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9B3492262F8C5D0C00A73A71 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B81C0452F8A0C64005946DC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -460,6 +541,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9B3492242F8C5D0C00A73A71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9B81C0432F8A0C64005946DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -498,6 +586,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9B34922E2F8C5D0C00A73A71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B81C0812F8A0E93005946DC /* LensUI */;
+			targetProxy = 9B34922D2F8C5D0C00A73A71 /* PBXContainerItemProxy */;
+		};
+		9B34923B2F8C5D8D00A73A71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B81C06E2F8A0E62005946DC /* LensCore */;
+			targetProxy = 9B34923A2F8C5D8D00A73A71 /* PBXContainerItemProxy */;
+		};
 		9B81C0762F8A0E62005946DC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9B81C06E2F8A0E62005946DC /* LensCore */;
@@ -526,6 +624,44 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		9B3492302F8C5D0C00A73A71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9B3492312F8C5D0C00A73A71 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9BQWF7Y4MW;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.richardtape.lens.LensUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		9B81C0502F8A0C65005946DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1016,6 +1152,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9B34922F2F8C5D0C00A73A71 /* Build configuration list for PBXNativeTarget "LensUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B3492302F8C5D0C00A73A71 /* Debug */,
+				9B3492312F8C5D0C00A73A71 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9B81C0422F8A0C64005946DC /* Build configuration list for PBXProject "Lens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
