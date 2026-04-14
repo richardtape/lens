@@ -52,7 +52,7 @@ public struct RootSplitView: View {
             contentColumn
                 .backgroundExtensionEffect()
         } detail: {
-            ReaderStubView(item: selectedItem)
+            ArticleReaderView(item: selectedItem)
         }
         .tint(accentColor)
         .environment(\.lensAccentColor, accentColor)

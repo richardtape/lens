@@ -37,7 +37,7 @@ public struct RootTabView: View {
                 NavigationStack {
                     TimelineView(selectedItem: $selectedItem)
                         .navigationDestination(item: $selectedItem) { item in
-                            ReaderStubView(item: item)
+                            ArticleReaderView(item: item)
                         }
                 }
             }
