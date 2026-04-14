@@ -48,8 +48,6 @@ struct LensMacApp: App {
         } catch {
             print("[Lens] Category seeding failed: \(error)")
         }
-        // PHASE-4-DEBUG — remove next line before Phase 5
-        await DebugFeedSeeder.seedIfNeeded(in: container)
     }
 }
 
