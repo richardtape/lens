@@ -34,15 +34,56 @@ public enum DebugFeedSeeder {
     @MainActor
     public static func seedIfNeeded(in container: ModelContainer) async {
         let context = container.mainContext
-        let existing = (try? context.fetch(FetchDescriptor<Feed>())) ?? []
-        guard existing.isEmpty else { return }
 
-        let feed = Feed(url: feedURL, displayName: feedName)
-        context.insert(feed)
-        try? context.save()
+        let feeds = (try? context.fetch(FetchDescriptor<Feed>())) ?? []
+        let items = (try? context.fetch(FetchDescriptor<FeedItem>())) ?? []
 
-        // FeedService creates its own ModelContext internally — safe to call here.
+        let feedId: UUID
+
+        if feeds.isEmpty {
+            // First launch — insert the feed.
+            print("[DebugSeeder] No feeds found — inserting \(feedURL)")
+            let feed = Feed(url: feedURL, displayName: feedName)
+            context.insert(feed)
+            do {
+                try context.save()
+                print("[DebugSeeder] Feed saved with id \(feed.id)")
+            } catch {
+                print("[DebugSeeder] ERROR saving feed: \(error)")
+                return
+            }
+            feedId = feed.id
+        } else if items.isEmpty {
+            // Feed exists but no items — previous fetch failed. Retry.
+            feedId = feeds[0].id
+            print("[DebugSeeder] Feed exists (id \(feedId)) but 0 items — retrying fetch")
+        } else {
+            print("[DebugSeeder] \(feeds.count) feed(s), \(items.count) item(s) — nothing to do")
+            return
+        }
+
+        // Subscribe to the event bus BEFORE fetching so we catch the result.
+        let monitorTask = Task {
+            for await event in await EventBus.shared.makeStream() {
+                switch event {
+                case .feedFetchCompleted(let id, let count) where id == feedId:
+                    print("[DebugSeeder] Fetch completed — \(count) new items inserted")
+                    return
+                case .feedFetchFailed(let id, let error) where id == feedId:
+                    print("[DebugSeeder] ERROR fetch failed: \(error)")
+                    return
+                default:
+                    break
+                }
+            }
+        }
+
+        print("[DebugSeeder] Starting FeedService fetch…")
         let service = FeedService(container: container)
-        await service.fetchFeed(feedId: feed.id)
+        await service.fetchFeed(feedId: feedId)
+        monitorTask.cancel()
+
+        let itemCount = (try? context.fetch(FetchDescriptor<FeedItem>()))?.count ?? -1
+        print("[DebugSeeder] Items now in store: \(itemCount)")
     }
 }

@@ -16,9 +16,11 @@ public struct AtomParser: FeedParser {
 
     public func canParse(data: Data, mimeType: String?) -> Bool {
         if let mime = mimeType?.lowercased(), mime.contains("atom") { return true }
-        // Sniff for the Atom namespace or root element name.
+        // Require the <feed> root element AND the Atom namespace URI.
+        // WordPress RSS feeds declare xmlns:atom="http://www.w3.org/2005/Atom" in their
+        // <rss> root — checking the namespace alone would select AtomParser for those feeds.
         let prefix = String(data: data.prefix(512), encoding: .utf8) ?? ""
-        return prefix.contains("http://www.w3.org/2005/Atom")
+        return prefix.contains("<feed") && prefix.contains("http://www.w3.org/2005/Atom")
     }
 
     public func parse(data: Data, feedURL: URL) throws -> ParsedFeed {
