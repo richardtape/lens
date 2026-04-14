@@ -86,6 +86,7 @@ struct WebViewWrapper: UIViewRepresentable {
         case .system: webView.overrideUserInterfaceStyle = .unspecified
         case .light:  webView.overrideUserInterfaceStyle = .light
         case .dark:   webView.overrideUserInterfaceStyle = .dark
+        @unknown default: webView.overrideUserInterfaceStyle = .unspecified
         }
     }
 }
@@ -123,6 +124,7 @@ struct WebViewWrapper: NSViewRepresentable {
         case .system: webView.appearance = nil          // follows window / system
         case .light:  webView.appearance = NSAppearance(named: .aqua)
         case .dark:   webView.appearance = NSAppearance(named: .darkAqua)
+        @unknown default: webView.appearance = nil
         }
     }
 }
