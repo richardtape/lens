@@ -14,7 +14,7 @@ Lens is a native RSS/Atom/JSON Feed reader for iOS and macOS, built with SwiftUI
 
 ## Current state
 
-**Phase 2 complete. Phase 3 complete.**
+**Phase 2 complete. Phase 3 complete. Phase 4 complete.**
 
 | Target | Type | Source folder |
 |--------|------|---------------|
@@ -77,7 +77,33 @@ trigger a fetch → parse → persist → event-emit cycle. No background schedu
 | 14 | `LensIOS/LensApp.swift` + `LensIOS/ContentView.swift` — TimelineState injected, RootTabView | ✓ |
 | 15 | `LensMac/LensMacApp.swift` + `LensMac/ContentView.swift` — TimelineState injected, RootSplitView, Commands | ✓ |
 
-**Next:** Phase 4 (WKWebView reader engine).
+**Phase 4 — All tasks completed:**
+
+| Task | File(s) | Status |
+|------|---------|--------|
+| 1 | `LensCore/Theme/BuiltInTheme.swift` — expanded structural + default CSS | ✓ |
+| 2 | `LensCore/Reader/HTMLSanitizer.swift` + `LensCoreTests/Reader/HTMLSanitizerTests.swift` | ✓ |
+| 3 | `LensCore/Reader/ArticlePageBuilder.swift` + `LensCoreTests/Reader/ArticlePageBuilderTests.swift` | ✓ |
+| 4 | `LensUI/Reader/WebViewWrapper.swift` | ✓ |
+| 5 | `LensUI/Reader/ArticleReaderView.swift` | ✓ |
+| 6 | Wired into `RootTabView` + `RootSplitView`; `ReaderStubView` deleted | ✓ |
+
+**Next:** Phase 5 (feeds management — add/edit/delete, categories, sidebar sort, feed health UI).
+
+**Phase 4 plan written — ready to execute:**
+Plan at `docs/superpowers/plans/2026-04-13-lens-phase-4-reader.md`.
+
+Items intentionally deferred out of Phase 4 scope (recorded here for Phase 5+ agents):
+- **`j`/`k` keyboard shortcuts** (next/prev item in list) — Phase 5. They need access to the
+  ordered, filtered item list inside `TimelineView`; the infrastructure isn't available in Phase 4.
+- **Full offline HTML + image download** (`OfflineAsset` pipeline) — Phase 6. Phase 4 sets
+  `savedOfflineState = .saved` and the text in SwiftData renders offline; images are not cached.
+- **Active theme selection UI** (pick a built-in or addon theme in Settings) — Phase 7.
+  `ArticlePageBuilder.buildPage(for:preferences:themeCSS:)` already accepts a custom `themeCSS`
+  parameter ready for it.
+- **Bionic reading** — post-v1 / addon. Field is in `UserReadingPreferences`; ThemeEngine has no
+  JS injection hook yet.
+- **Image lightbox** — post-v1. `imageLightboxEnabled` is afforded on `UserReadingPreferences`.
 
 **Implementation notes for future agents:**
 - `RetentionPolicy` (enum with associated value) cannot be stored directly as a SwiftData `@Model` property — SwiftData corrupts it on mutation. It is backed by `_retentionPolicyDays: Int?` with a computed `retentionPolicy` accessor.
@@ -96,9 +122,35 @@ trigger a fetch → parse → persist → event-emit cycle. No background schedu
 - `@Query` with dynamic predicates: use the parent/child split pattern from `TimelineView.swift`. The inner view (`TimelineContentView`) takes filter params as `let` constants (not bindings), which causes SwiftUI to reinit it (and thus rebuild the `@Query`) when params change.
 - Category filter in `TimelineFilter` cannot be expressed as a SwiftData `#Predicate` because `FeedItem` stores only `feedId`, not `categoryId`. Use `TimelineFilter.fetchDescriptor` for all/feed/unread cases; apply category membership in-memory in `displayedItems`.
 - Accent color is set via `.tint()` on root views AND `.environment(\.lensAccentColor, ...)`. Standard controls (buttons, toggles) pick up `.tint`; custom shapes (accent bar, monogram background) read `@Environment(\.lensAccentColor)`.
-- `ReaderStubView` is the Phase 4 replacement target — it already receives `FeedItem?` and is wired into both the iOS `NavigationStack` (via `.navigationDestination`) and the macOS detail column.
+- `ReaderStubView` is deleted. Any future reference to it is a bug.
 - macOS `?` keyboard shortcut uses `FocusedValues.showKeyboardShortcuts` — the Commands block in `LensMacApp.swift` reads it; `RootSplitView` provides it via `.focusedSceneValue`.
 - All types in `LensUI` used from `LensIOS`/`LensMac` must be `public` — including the struct, `init()`, and `var body`. After changing access levels, a **Product → Clean Build Folder (⌘⇧K)** is required or Xcode links against stale cached objects and the app fails preflight at launch.
+
+**Phase 4 implementation notes (for Phase 5 agents):**
+- `ArticleReaderView` is `public` in `LensUI/Reader/`. It takes `FeedItem?` — nil
+  shows `ContentUnavailableView` (macOS idle detail column). Both shells now use it.
+- `WebViewWrapper` uses `WebViewCoordinator` (a class) as `WKNavigationDelegate`.
+  `updateUIView`/`updateNSView` compares `coordinator.lastLoadedHTML` to avoid
+  reloading the web view on routine SwiftUI rerenders.
+- JavaScript is disabled globally via `config.defaultWebpagePreferences.allowsContentJavaScript = false`.
+  Do not re-enable — feed content should not need JS.
+- External link handling: `prefs.externalLinkBehavior == .inAppBrowser` shows
+  `SFSafariViewController` on iOS; macOS falls back to system browser (no SFVC on Mac).
+- Star/save mutations call `modelContext.save()` immediately then emit EventBus events
+  in a detached `Task`. The `Task` captures `item.id` by value (not `item` itself) to
+  avoid a potential actor-isolation warning as `FeedItem` is `@Model`.
+- macOS keyboard shortcuts `o`/`f`/`s`/`u` are `.keyboardShortcut` modifiers on
+  toolbar buttons in `ArticleReaderView`. They fire when the reader window is key.
+  `j`/`k` (next/prev in list) are deferred to Phase 5 — they require access to the
+  filtered item list managed by `TimelineView`.
+- `BuiltInTheme` structural and default theme CSS are now production quality.
+  `color-mix()` is used in the default theme — requires WebKit ≥ Safari 16.2
+  (well within iOS 26 / macOS 26 targets).
+- `ArticlePageBuilder.buildPage(for:preferences:themeCSS:)` accepts a custom
+  `themeCSS` string for addon themes; defaults to `BuiltInTheme.defaultThemeCSS`.
+  Phase 7 (settings) will add the UI to select an active addon theme.
+- Swift 6 warning: public enums (`LinkBehavior`, `AppearanceOverride`) need
+  `@unknown default` in exhaustive switches — already applied in Phase 4 files.
 
 ---
 
@@ -114,14 +166,16 @@ Lens.xcodeproj
 │   ├── Persistence/        # ModelContainer setup, App Group config
 │   ├── Feeds/              # Fetch pipeline, parsers, feed factory
 │   ├── Events/             # Event bus types and EventBus actor
-│   ├── Theme/              # ThemeEngine, CSS composition
+│   ├── Theme/              # ThemeEngine, CSS composition, BuiltInTheme, TokenLayer
+│   ├── Reader/             # HTMLSanitizer, ArticlePageBuilder
 │   └── Routing/            # DeepLinkRouter
 ├── LensCoreTests/          # Unit tests for LensCore (populated from Phase 2)
 ├── LensUI/                 # iOS + macOS framework; shared SwiftUI views
 │   ├── LensUI.swift        # framework stub
 │   ├── Components/         # AccentColorKey.swift, MonogramView.swift
 │   ├── Shell/              # RootTabView (iOS), RootSplitView (Mac), StubDestinationView
-│   └── Timeline/           # TimelineView, TimelineState, ArticleRowView, filters, banner, stubs
+│   ├── Timeline/           # TimelineView, TimelineState, ArticleRowView, filters, banner
+│   └── Reader/             # WebViewWrapper, ArticleReaderView
 ├── LensUITests/            # Unit tests for LensUI (target created by human driver — Task 2)
 ├── LensIOS/                # iOS app entry, scene lifecycle, tab bar
 └── LensMac/                # macOS app entry, menus, window management
