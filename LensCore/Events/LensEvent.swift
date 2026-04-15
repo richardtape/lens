@@ -131,4 +131,22 @@ public enum LensEvent: Equatable, Sendable {
     /// Import OPML subscriptions from the given URL.
     /// Emitted for `lens://import?opml=<url>` (spec §4.12).
     case navigateToOPMLImport(sourceURL: URL)
+
+    // MARK: Feed CRUD (Phase 5)
+
+    /// A new feed was added to the subscription list.
+    case feedAdded(feedId: UUID)
+    /// A feed was deleted. All its items have been removed.
+    case feedDeleted(feedId: UUID)
+    /// A feed's display name or category assignment was changed.
+    case feedUpdated(feedId: UUID)
+
+    // MARK: Category CRUD (Phase 5)
+
+    /// A new user category was created.
+    case categoryAdded(categoryId: UUID)
+    /// A category was deleted; its feeds have been unassigned.
+    case categoryDeleted(categoryId: UUID)
+    /// A category was renamed.
+    case categoryRenamed(categoryId: UUID)
 }

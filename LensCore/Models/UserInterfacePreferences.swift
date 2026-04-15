@@ -3,11 +3,21 @@ import SwiftData
 import Foundation
 
 /// Controls the sort order of feeds in the sidebar.
-public enum FeedSortOrder: String, Codable, Sendable {
+public enum FeedSortOrder: String, Codable, Sendable, CaseIterable {
     case alphabetical
     case unreadCount
     case lastUpdated
     case byCategory
+
+    /// Human-readable label used in sort pickers and the macOS Sort Feeds menu.
+    public var localizedName: String {
+        switch self {
+        case .alphabetical:  return "Alphabetical"
+        case .unreadCount:   return "Unread Count"
+        case .lastUpdated:   return "Last Updated"
+        case .byCategory:    return "By Category"
+        }
+    }
 }
 
 /// How long feed items are kept before background eviction.
